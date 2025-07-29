@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JD Siren Conflict Scanner</title>
+</head>
+<body style="font-family:sans-serif; background:#111; color:#0f0; padding:2em;">
+    <h2>Upload ZIP of Car Packs</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".zip" required>
+        <button type="submit">Scan</button>
+    </form>
+
+    {% if txt %}
+    <h3>Download Results:</h3>
+    <ul>
+        <li><a href="{{ url_for('download_file', filename=txt) }}">TXT Results</a></li>
+        <li><a href="{{ url_for('download_file', filename=xlsx) }}">XLSX Results</a></li>
+    </ul>
+    {% endif %}
+</body>
+</html>
