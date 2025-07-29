@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JD Siren Conflict Scanner</title>
+    <style>
+        body {
+            background-color: #071e07;
+            color: #00FF66;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input[type=file], input[type=submit] {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JD Siren Conflict Scanner</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="zip_file" accept=".zip" required><br>
+        <input type="submit" value="Upload and Scan">
+    </form>
+</body>
+</html>
